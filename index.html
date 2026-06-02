@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メの島 / ME-NO-SHIMA — 建築構想設計書シリーズ</title>
+<meta property="og:title" content="メの島 / ME-NO-SHIMA">
+<meta property="og:description" content="ぽこあポケモン由来ファンメイド島構想・建築設計書シリーズ（全13施設＋全体図）">
+<meta property="og:url" content="https://osakenpiro.github.io/me-no-shima/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://osakenpiro.github.io/me-no-shima/images/P-2026-014-master-map.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --paper: #f4ead2;
+    --paper-2: #e8dcb8;
+    --ink: #1f3a5f;
+    --ink-2: #3a5275;
+    --ink-3: #6d7a92;
+    --red: #b03030;
+    --red-2: #8a2020;
+    --line: #c4b58a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    background-image:
+      radial-gradient(ellipse at top, rgba(255,253,235,0.4) 0%, transparent 50%),
+      repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(196,181,138,0.08) 28px, rgba(196,181,138,0.08) 29px);
+  }
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 2px double var(--ink-2);
+    position: relative;
+  }
+  header::before {
+    content: "PROJECT: ME-NO-SHIMA";
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-3);
+  }
+  header::after {
+    content: "極 秘 / TOP SECRET";
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    padding: 6px 14px;
+    border: 2px solid var(--red);
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transform: rotate(3deg);
+    background: rgba(244,234,210,0.6);
+  }
+  h1 {
+    font-size: 48px;
+    letter-spacing: 0.2em;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--ink-2);
+    letter-spacing: 0.15em;
+  }
+  .lead {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 0 20px;
+    font-size: 15px;
+    color: var(--ink-2);
+  }
+  .lead p { margin-bottom: 10px; }
+  .section-title {
+    text-align: center;
+    margin: 60px 0 30px;
+    font-size: 22px;
+    letter-spacing: 0.3em;
+    color: var(--ink);
+    position: relative;
+  }
+  .section-title::before, .section-title::after {
+    content: "❖";
+    color: var(--line);
+    margin: 0 16px;
+    font-size: 14px;
+  }
+  /* MASTER MAP */
+  .master {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+  }
+  .master-frame {
+    border: 1px solid var(--line);
+    padding: 8px;
+    background: var(--paper-2);
+    box-shadow: 0 8px 24px rgba(31,58,95,0.15);
+  }
+  .master-frame img {
+    width: 100%;
+    display: block;
+  }
+  .master-cap {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+  }
+  /* GALLERY */
+  .gallery {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+  }
+  .card {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    padding: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(31,58,95,0.18);
+  }
+  .card a { display: block; text-decoration: none; color: inherit; }
+  .card img { width: 100%; display: block; }
+  .card-meta {
+    padding: 12px 4px 4px;
+  }
+  .pnum {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.1em;
+  }
+  .title-ja {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 4px 0 2px;
+  }
+  .title-en {
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.05em;
+  }
+  .caption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+  /* MISSING placeholder */
+  .card-missing {
+    background: var(--paper);
+    border: 2px dashed var(--ink-3);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    text-align: center;
+    color: var(--ink-3);
+  }
+  .card-missing .pnum { color: var(--ink-3); margin-bottom: 8px; }
+  .card-missing .title-ja { margin-bottom: 12px; }
+  .card-missing .status {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--ink-3);
+    color: var(--paper);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    border-radius: 2px;
+  }
+  /* ANNEX */
+  .annex {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+  .annex .card { max-width: 600px; margin: 0 auto; }
+  /* FOOTER */
+  footer {
+    border-top: 2px double var(--ink-2);
+    padding: 40px 20px 60px;
+    text-align: center;
+    color: var(--ink-3);
+    font-size: 13px;
+  }
+  footer .stamp {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 2px solid var(--red);
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    margin: 14px 0;
+    transform: rotate(-2deg);
+  }
+  footer a { color: var(--ink); text-decoration: underline; }
+  footer .credit { margin-top: 16px; font-size: 11px; letter-spacing: 0.1em; }
+  /* MOBILE */
+  @media (max-width: 640px) {
+    h1 { font-size: 32px; }
+    header { padding: 50px 12px 30px; }
+    header::before, header::after { font-size: 10px; }
+    .gallery { grid-template-columns: 1fr; gap: 20px; padding: 0 12px 40px; }
+    .master, .annex { padding-left: 12px; padding-right: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>メの島</h1>
+  <div class="subtitle">ME-NO-SHIMA &nbsp; / &nbsp; Development Plan Series</div>
+</header>
+
+<div class="lead">
+  <p>ぽこあポケモン由来ファンメイド島構想シリーズ。メタモン開発局・都市計画課による全13施設の建築設計書＋全体図。チャッピー（ChatGPT）画像生成、Claudeプロンプト設計、osakenpiro原案。</p>
+  <p>各設計書は「ME-NO-SHIMA設計書様式」に準拠：俯瞰イラスト＋断面図＋平面図＋設計要点＋極秘スタンプ。ぽこぽけ統合handoff（35型理論カタログ）のビジュアル実装提案として機能。</p>
+</div>
+
+<div class="section-title">全体図 &nbsp; / &nbsp; Master Map</div>
+<section class="master">
+  <div class="master-frame">
+    <a href="images/P-2026-014-master-map.png" target="_blank">
+      <img src="images/P-2026-014-master-map.png" alt="メの島 全体図 Master Map">
+    </a>
+  </div>
+  <div class="master-cap">No. P-2026-014 &nbsp;·&nbsp; 13施設＋路線＋空路＋地形を1枚に</div>
+</section>
+
+<div class="section-title">施設一覧 &nbsp; / &nbsp; Facilities</div>
+<section class="gallery">
+
+  <article class="card">
+    <a href="images/P-2026-001-metamon-cityhall.png" target="_blank">
+      <img src="images/P-2026-001-metamon-cityhall.png" alt="メタモン市庁舎">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-001</div>
+      <div class="title-ja">メタモン市庁舎</div>
+      <div class="title-en">Ditto City Hall / Seat of the Ever-Shifting Isle</div>
+      <div class="caption">島の civic core。家具98%がメタモン変身、書類はドーブル正本＋ポリゴンデジタル二重保管。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-002-lucky-arcade.png" target="_blank">
+      <img src="images/P-2026-002-lucky-arcade.png" alt="ラッキーアーケード">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-002</div>
+      <div class="title-ja">ラッキーアーケード</div>
+      <div class="title-en">Lucky Arcade / Arcade of Happiness</div>
+      <div class="caption">ガラスドーム屋根のヨーロッパ風×昭和商店街。ハピナス系シヨップ街、ラブカスの泉、ハートのウロコ専門店。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-003-gym-league-hq.png" target="_blank">
+      <img src="images/P-2026-003-gym-league-hq.png" alt="ジムリーグ本部">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-003</div>
+      <div class="title-ja">ジムリーグ本部</div>
+      <div class="title-en">Gym League HQ / Eight Towers of Challenge & Glory</div>
+      <div class="caption">中央アリーナ＋8タイプ別タワー。バリヤード結界システムで観客安全、ラッキー医療棟24h稼働。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-004-poke-danchi.png" target="_blank">
+      <img src="images/P-2026-004-poke-danchi.png" alt="ポケ団地">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-004</div>
+      <div class="title-ja">ポケ団地</div>
+      <div class="title-en">Pokedanchi Cliff Village / Tiny Houses Clinging to the Cliff</div>
+      <div class="caption">崖にへばりつく小家42戸。全長75m、らせん階段、強風注意・避難経路は海側。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-005-kaitei-pigan-jou.png" target="_blank">
+      <img src="images/P-2026-005-kaitei-pigan-jou.png" alt="海底ぴがんじょう">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-005</div>
+      <div class="title-ja">海底ぴがんじょう</div>
+      <div class="title-en">Kaitei Pigan-Jou / Glass Facility Beneath the Sea</div>
+      <div class="caption">強化ガラス2層構造、ノーチラスシェル配置、深海観測ラウンジ-35m。チョンチー/ランターンが生体照明。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-006-gorogoro-underground.png" target="_blank">
+      <img src="images/P-2026-006-gorogoro-underground.png" alt="ゴロゴロ地下街">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-006</div>
+      <div class="title-ja">ゴロゴロ地下街</div>
+      <div class="title-en">Gorogoro Underground / Lively Bazaar Beneath the Rock</div>
+      <div class="caption">岩盤補強はゴローニャ施工、オニックスがメイン動脈。地熱で年中ぽかぽか、化石発掘ゾーン併設。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-007-rocket-central-station.png" target="_blank">
+      <img src="images/P-2026-007-rocket-central-station.png" alt="ロケット団中央駅">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-007</div>
+      <div class="title-ja">ロケット団中央駅</div>
+      <div class="title-en">Rocket Central Station / The Island's Suspiciously Convenient Gateway</div>
+      <div class="caption">4路線（海底ぴがんじょう/ゴロゴロ/モケハバラ/なみのり）のハブ。ゴルバット照明、ドガース無害スモーク演出。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-008-pidgeon-port.png" target="_blank">
+      <img src="images/P-2026-008-pidgeon-port.png" alt="ピジョン便ポート">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-008</div>
+      <div class="title-ja">ピジョン便ポート</div>
+      <div class="title-en">Pidgeon Delivery Port / The Island's Sky-Postal Service</div>
+      <div class="caption">翼幅別レーン分け、1日6便。エアームド重量物専用、ヨルノズク夜間管制。</div>
+    </div>
+  </article>
+
+  <article class="card card-missing">
+    <div class="pnum">No. P-2026-009</div>
+    <div class="title-ja">モンスターボール工場</div>
+    <div class="title-en">Pokéball Factory</div>
+    <div class="caption">マグネトン系電磁成型、ハガネール原料供給、メタグロスQC。<br>※単体設計書 未生成</div>
+    <span class="status">PENDING</span>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-010-berry-farm.png" target="_blank">
+      <img src="images/P-2026-010-berry-farm.png" alt="きのみ農園">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-010</div>
+      <div class="title-ja">きのみ農園</div>
+      <div class="title-en">Berry Farmstead / Bounty of Sun, Soil & Pokémon</div>
+      <div class="caption">トロピウスは歩く果樹園、エルフーン綿毛で受粉、収穫物はマルエツ市場へ直送。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-011-mokehabara-electric.png" target="_blank">
+      <img src="images/P-2026-011-mokehabara-electric.png" alt="モケハバラ電気街">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-011</div>
+      <div class="title-ja">モケハバラ電気街</div>
+      <div class="title-en">Mokehabara Electric District / Glorious Chaos District</div>
+      <div class="caption">マグネトン街灯システム、アニメビル・ゲーセン・ガチャガチャ・自販機・屋台ラーメン。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-012-ryu-no-yu.png" target="_blank">
+      <img src="images/P-2026-012-ryu-no-yu.png" alt="リュウのユ">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-012</div>
+      <div class="title-ja">リュウのユ</div>
+      <div class="title-en">Ryu-no-Yu / Dragons' Bathhouse of a Thousand Steams</div>
+      <div class="caption">5層構造（1F受付〜5F屋上龍見台）。源泉85℃→各浴場42℃、カイリュー羽ばたきで湯気循環。</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <a href="images/P-2026-013-naminori-resort.png" target="_blank">
+      <img src="images/P-2026-013-naminori-resort.png" alt="なみのりリゾート">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">No. P-2026-013</div>
+      <div class="title-ja">なみのりリゾート</div>
+      <div class="title-en">Naminori Resort / Surf-Ride Paradise of the South</div>
+      <div class="caption">ラプラスタクシー時刻表（1日4便）、サニーゴ礁が天然防波堤、高潮時コテージは浮く設計。</div>
+    </div>
+  </article>
+
+</section>
+
+<div class="section-title">Annex &nbsp; / &nbsp; 付随資料</div>
+<section class="annex">
+  <article class="card">
+    <a href="images/annex-workers-wanted.png" target="_blank">
+      <img src="images/annex-workers-wanted.png" alt="工員募集ポスター">
+    </a>
+    <div class="card-meta">
+      <div class="pnum">ANNEX-001</div>
+      <div class="title-ja">工員募集ポスター</div>
+      <div class="title-en">Workers Wanted / Let's Build Me-no-Shima Together</div>
+      <div class="caption">島の全域で募集中。日給きのみ3個＋ハートのウロコ1枚、休憩所はポケテラス頂上、通勤はそらをとぶ可。</div>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <div class="stamp">CONCEPT PROPOSAL ONLY</div>
+  <div>原案 / <strong>osakenpiro</strong></div>
+  <div>プロンプト設計 / <strong>Claude (Anthropic)</strong></div>
+  <div>画像生成 / <strong>ChatGPT (OpenAI)</strong></div>
+  <div class="credit">
+    ぽこあポケモン / Pokémon Pokopia は株式会社ポケモン・任天堂・ゲームフリークの商標。<br>
+    本プロジェクトはファンメイドの非営利二次創作です。<br>
+    <a href="https://github.com/osakenpiro/me-no-shima">GitHub</a> ·
+    <a href="https://osakenpiro.github.io/">他のtools</a>
+  </div>
+</footer>
+
+</body>
+</html>

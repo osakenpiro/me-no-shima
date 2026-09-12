@@ -45,6 +45,18 @@ me-no-shima/
 
 ## ロードマップ
 
+### Floating castle building note
+
+`floating-castle.html` connects two user-approved concept images, three relative levels, nine facilities, and a three-stage checklist of 17 actions. A shared three-part site navigation connects the master map, facility gallery, and building note. The main page leads from the original master map into the castle feature. Context links connect the castle station, underground plant room and orchard with the existing Rocket Central Station, Gorogoro Underground and Berry Farmstead design cards in both directions; these are reading references, not asserted physical connections. The original 14 image assets and existing facility descriptions remain unchanged.
+
+The two WebP derivatives are stored in `images/`. Exact PNG originals and provenance hashes are kept in `osakenpiro/pokopoke-assets/concept-art/manifest.md` as C11/C12. Images are concepts, not verified game blueprints or completed buildings.
+
+`castle.js` stores checklist values only in the current browser's local storage (`me-no-shima:castle-checklist:v1`). There is no sharing or synchronization. Failed or invalid storage falls back to the current page lifetime without overwriting unreadable data. The static content and ordinary image links remain available without JavaScript.
+
+The site requires no build step or dependencies. GitHub Pages serves static files. Preview with an existing static HTTP server before publishing. QA source files and screenshots are local project evidence and are excluded from the publication allowlist.
+
+### Existing roadmap
+
 - [x] 13施設＋マスターマップ＋annex 画像化
 - [x] GitHub Pagesデプロイ
 - [ ] モンスターボール工場（P-2026-009）追加生成

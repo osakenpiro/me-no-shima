@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空中城・ターミナル拠点 | メの島</title>
+<meta name="description" content="メの島の空中城と城下町。完成イメージから、駅・倉庫・城・地下の構成、次回プレイの建築チェックリストへ。">
+<meta property="og:title" content="空中城・ターミナル拠点 | メの島">
+<meta property="og:description" content="完成イメージを眺めて、次に作る場所へ。空中城と城下町の建築ノート。">
+<meta property="og:image" content="https://osakenpiro.github.io/me-no-shima/images/floating-castle-terminal.webp">
+<meta property="og:url" content="https://osakenpiro.github.io/me-no-shima/floating-castle.html">
+<link rel="stylesheet" href="castle.css">
+<script src="castle.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ</a>
+<header class="masthead">
+<a class="wordmark" href="./">メの島<span>ME-NO-SHIMA</span></a>
+<p class="document-no">BUILDING NOTE <span>2026.09.12</span></p>
+<a class="home-link" href="#island-context">島とのつながり <span aria-hidden="true">↓</span></a>
+</header>
+<nav class="island-nav" aria-label="メの島 サイト案内">
+  <a href="./#master-map"><span>01</span> 島の全体図</a>
+  <a href="./#island-facilities"><span>02</span> 施設の設計書</a>
+  <a href="floating-castle.html" aria-current="page"><span>03</span> 空中城ノート</a>
+</nav>
+<main id="main">
+<p class="breadcrumbs"><a href="./">メの島</a><span aria-hidden="true"> / </span> 建築ノート <span aria-hidden="true"> / </span><strong>空中城・ターミナル拠点</strong></p>
+<section class="intro" id="overview" aria-labelledby="page-title">
+<div class="intro-copy">
+<div><p class="eyebrow">空中城・ターミナル拠点 / CONCEPT &amp; PLAY PLAN</p>
+<h1 id="page-title">雲の上に、<br>次の冒険の拠点を。</h1></div>
+<div class="intro-side"><p>駅に着き、倉庫に荷物を置いて、城へ。<br>空の中庭から、静かな地下の緑まで。<br>眺めていた景色を、少しずつ暮らせる場所に。</p>
+<a class="button primary" href="#next-play">次のプレイで作る場所を見る <span aria-hidden="true">↓</span></a></div>
+</div>
+<figure class="artwork hero-art">
+<a class="art-link" href="images/floating-castle-terminal.webp" data-lightbox data-caption="空中城とターミナル駅のある城下町 — 完成イメージ" aria-label="全景コンセプトアートを拡大">
+<img src="images/floating-castle-terminal.webp" width="1672" height="941" alt="青空と雲の中に浮かぶ城。手前の駅と城下町から、橋が城へ続く完成イメージ。" fetchpriority="high">
+<span class="enlarge">全景を拡大 <span aria-hidden="true">＋</span></span></a>
+<figcaption><span>01 / 空中城と城下町の全景</span><span>承認済みコンセプトアート · ChatGPT生成</span></figcaption>
+</figure>
+<div class="concept-note"><p><strong>これは完成イメージです。</strong> ゲーム画面や、建築可能性を検証済みの設計図ではありません。画像内の名称・英語コピーは演出で、正式設定として採用していません。</p></div>
+</section>
+
+<nav class="section-nav" aria-label="この建築ノートの目次">
+<a href="#overview"><span>01</span> 完成イメージ</a>
+<a href="#area-map"><span>02</span> エリアと動線</a>
+<a href="#facilities"><span>03</span> 施設を見る</a>
+<a href="#next-play"><span>04</span> 次のプレイ</a>
+</nav>
+
+<section class="page-section" id="area-map" aria-labelledby="area-title">
+<div class="section-heading"><p class="eyebrow">02 / AREA &amp; CIRCULATION</p><h2 id="area-title">空と地上と、地下をつなぐ。</h2><p>まず通り道を確保し、見せ場はその先に育てていく。</p></div>
+<div class="area-layout">
+<div class="levels" aria-label="エリアの上下関係と施設へのリンク">
+<div class="level air"><div class="level-label"><span>AIR</span><h3>空中城</h3><p>中庭から各部屋へ</p></div><div class="level-links"><a href="#courtyard">中庭</a><a href="#cathedral">ステンドグラス大聖堂</a><a href="#well">井戸</a><a href="#mirror">鏡の部屋</a><a href="#treasury">宝物倉庫</a></div></div>
+<p class="connection"><span aria-hidden="true">↕</span> 城入口・上下移動の経路を確保 <span class="proposed">提案</span></p>
+<div class="level ground"><div class="level-label"><span>GROUND</span><h3>城下町</h3><p>交通と荷物の拠点</p></div><div class="level-links"><a href="#station">ターミナル駅</a><span aria-hidden="true">↔</span><a href="#utility-storage">実用倉庫</a><span class="route-tail">→ 城入口へ</span></div></div>
+<p class="connection"><span aria-hidden="true">↕</span> 地下入口と、拡張する余地を残す <span class="proposed">提案</span></p>
+<div class="level underground"><div class="level-label"><span>UNDERGROUND</span><h3>地下</h3><p>静かな植物の空間</p></div><div class="level-links"><a href="#orchard">地下果樹園</a><a href="#plant-room">神秘的な地下植物室</a></div></div>
+</div>
+<aside class="field-note"><p class="eyebrow">配置を決める前に</p><h3>荷物を置いて、<br>城まで歩けるか。</h3><p>駅 → 実用倉庫 → 城入口を、最初の一本の動線に。城への上り下りと地下入口は、その道からつながる位置を候補にします。</p><p class="small">図は相対配置の提案です。敷地寸法・高低差・地下の位置や深さ・移動手段は未確認。縮尺やゲーム内の機能を示すものではありません。</p><a class="text-link" href="#phase-one">最初の位置決めへ <span aria-hidden="true">↗</span></a></aside>
+</div>
+<div class="status-note"><strong>いま分かっていること</strong><p>空中城は建築中（本人申告）。駅・倉庫を備えた拠点にする方針と、各施設の構想は決定済みです。各施設の完成度・実際の配置・使用パーツ・所持素材は未確認です。</p></div>
+</section>
+
+<section class="page-section" id="interior" aria-labelledby="interior-title">
+<div class="section-heading"><p class="eyebrow">INSIDE THE CASTLE</p><h2 id="interior-title">光の部屋、緑の奥行き。</h2><p>中庭、大聖堂、井戸、鏡の部屋、宝物倉庫。そして地下の二つの植物空間。</p></div>
+<figure class="artwork board-art">
+<a class="art-link" href="images/castle-interior-underground.webp" data-lightbox data-caption="城内・地下の7つの空間 — 完成イメージ" aria-label="城内・地下コンセプトボードを拡大">
+<img src="images/castle-interior-underground.webp" width="1448" height="1086" alt="中庭とステンドグラス大聖堂、井戸、鏡の部屋、宝物倉庫、地下果樹園、静かで神秘的な地下植物室を並べた7場面のコンセプトボード。" loading="lazy">
+<span class="enlarge">7つの空間を拡大 <span aria-hidden="true">＋</span></span></a>
+<figcaption><span>02 / 城内・地下のコンセプトボード</span><span>各施設の実現性は未検証</span></figcaption>
+</figure>
+</section>
+
+<section class="page-section" id="facilities" aria-labelledby="facilities-title">
+<div class="section-heading"><p class="eyebrow">03 / PLACES TO BUILD</p><h2 id="facilities-title">この拠点に育てたい場所。</h2><p>場所と雰囲気は構想、役割の補足と着手順は建築準備の提案です。各カードから対応するチェック項目へ進めます。</p></div>
+<div class="facility-grid">
+<article class="facility" id="station" tabindex="-1"><p class="facility-meta">城下町 <span>構想 / 配置未確認</span></p><h3>ターミナル駅</h3><p>到着と出発の起点。駅前から倉庫と城へ迷わず進める構成に。</p><p class="small">駅名・路線名・既存路線との接続は未確定です。島全体の交通構想は、<a href="./#facility-007">ロケット団中央駅の設計書</a>へ。</p><a href="#check-station">駅の候補位置を決める →</a></article>
+<article class="facility" id="utility-storage" tabindex="-1"><p class="facility-meta">城下町 <span>構想 / 配置未確認</span></p><h3>実用倉庫</h3><p>持ち込む実用品を保管する場所。駅からの搬入と、建築に向かう出入りを優先。</p><p class="small">城内の宝物倉庫とは分けて計画します。</p><a href="#check-storage">荷物を置く場所を決める →</a></article>
+<article class="facility" id="courtyard" tabindex="-1"><p class="facility-meta">空中城 <span>構想 / 進捗未確認</span></p><h3>中庭</h3><p>城の中心になる、ひらけた空間。入口と各部屋をつなぐ道を先に通します。</p><a href="#check-courtyard">中庭と主要通路をつなぐ →</a></article>
+<article class="facility" id="cathedral" tabindex="-1"><p class="facility-meta">空中城 <span>構想 / 実現性未検証</span></p><h3>ステンドグラス大聖堂</h3><p>光を見せ場にする大きな空間。使える窓やパーツを確認して、小さな一面から。</p><a href="#check-cathedral">窓まわりを一面試す →</a></article>
+<article class="facility" id="well" tabindex="-1"><p class="facility-meta">空中城 <span>構想 / 進捗未確認</span></p><h3>井戸</h3><p>城に小さな静けさをつくる場所。中庭や通路との距離を歩いて確かめます。</p><a href="#check-well">井戸の位置を仮置きする →</a></article>
+<article class="facility" id="mirror" tabindex="-1"><p class="facility-meta">空中城 <span>構想 / 実現性未検証</span></p><h3>鏡の部屋</h3><p>映り込みと奥行きを楽しむ部屋。表現に使えるものを、実際のゲームで確認。</p><a href="#check-mirror">使える表現を一つ試す →</a></article>
+<article class="facility" id="treasury" tabindex="-1"><p class="facility-meta">空中城 <span>構想 / 進捗未確認</span></p><h3>宝物倉庫</h3><p>宝物を眺め、並べるための空間。日常の実用品を置く倉庫とは、役割を分けます。</p><a href="#check-treasury">宝物を置く区画をつくる →</a></article>
+<article class="facility" id="orchard" tabindex="-1"><p class="facility-meta">地下 <span>構想 / 実現性未検証</span></p><h3>地下果樹園</h3><p>地下に緑と実りがある風景。地下での植栽・生育条件は、先に小さく確認します。</p><p class="small">地上の実りの構想も眺める：<a href="./#facility-010">きのみ農園の設計書</a></p><a href="#check-orchard">地下で植栽を試せるか確認 →</a></article>
+<article class="facility" id="plant-room" tabindex="-1"><p class="facility-meta">地下 <span>構想 / 実現性未検証</span></p><h3>神秘的な地下植物室</h3><p>ナウシカの地下の部屋を連想させる、静かで神秘的な植物の空間。</p><p class="small">浄化機能や発光植物の実装を保証するものではありません。島の地下空間の構想は、<a href="./#facility-006">ゴロゴロ地下街の設計書</a>へ。</p><a href="#check-plants">植物と光の小さな一角を試す →</a></article>
+</div>
+<a class="text-link back-link" href="#area-map">↑ エリアと動線に戻る</a>
+</section>
+
+<section class="page-section play-section" id="next-play" aria-labelledby="play-title">
+<div class="section-heading"><p class="eyebrow">04 / NEXT PLAY</p><h2 id="play-title">次は、一本の道から。</h2><p>施工順は初期提案です。現地で確かめながら、できるところから進めてください。</p></div>
+<div class="next-target"><span class="target-stamp">最初の到達点</span><h3>駅・倉庫・城入口の位置を仮決めし、<br>その間を一度、往復する。</h3><p>まずは位置と通り道がつながれば一区切り。地下入口の候補と、後で広げられる余地も残します。</p></div>
+<div class="checklist-toolbar"><p id="checklist-count" role="status" aria-live="polite">チェックリスト / 0 件チェック</p><p id="save-status">チェックはこの端末・このブラウザ内だけに保存。共有・同期はしません。</p><p class="small">これは手元の作業メモです。チェックしても施設の公開進捗は更新されません。</p></div>
+<noscript><p class="storage-warning">JavaScriptが無効です。リストは読めますが、チェック状態の保存・集計はできません。</p></noscript>
+<div class="phase" id="phase-one"><div class="phase-title"><span>01</span><div><h3>位置と動線を確保する</h3><p>次回はここから</p></div></div>
+<ul class="checklist">
+<li id="check-survey"><label><input type="checkbox" data-check="survey"><span><strong>いま建っている部分と空いている敷地を確認する</strong><small>壊さずに残す場所、高低差、通れない場所を見ておく。</small></span></label></li>
+<li id="check-station"><label><input type="checkbox" data-check="station"><span><strong>ターミナル駅の候補位置を一か所決める</strong><small>駅前広場を後で広げられるか、周囲も確認。</small></span></label></li>
+<li id="check-storage"><label><input type="checkbox" data-check="storage"><span><strong>実用倉庫の候補位置を一か所決める</strong><small>持ち込む荷物の種類と量を確認し、駅からの出入りを考える。</small></span></label></li>
+<li id="check-entrance"><label><input type="checkbox" data-check="entrance"><span><strong>城入口の位置と、上下移動に使う経路を仮決めする</strong><small>使える移動方法はゲーム内で確認する。</small></span></label></li>
+<li id="check-route"><label><input type="checkbox" data-check="route"><span><strong>駅 → 倉庫 → 城入口を一度往復する</strong><small>通れない・回り道になる箇所を見つけたら、仮配置を調整。</small></span></label></li>
+<li id="check-underground"><label><input type="checkbox" data-check="underground"><span><strong>地下入口の候補位置を一か所決める</strong><small>既存の建築を避け、地下へ進めるか現地で確かめる。</small></span></label></li>
+<li id="check-reserve"><label><input type="checkbox" data-check="reserve"><span><strong>城下町と地下を広げるための空間を残す</strong><small>今回建てる範囲と、空けておく範囲を見分けられるようにする。</small></span></label></li>
+</ul></div>
+<div class="phase" id="phase-two"><div class="phase-title"><span>02</span><div><h3>拠点として使える骨格へ</h3><p>位置と経路が確認できたら</p></div></div>
+<ul class="checklist">
+<li id="check-usable-storage"><label><input type="checkbox" data-check="usable-storage"><span><strong>実用倉庫に、持ち込む物を置ける一区画をつくる</strong><small>出し入れして、入口や通路をふさがないか確認。</small></span></label></li>
+<li id="check-courtyard"><label><input type="checkbox" data-check="courtyard"><span><strong>城入口と中庭を、主要通路でつなぐ</strong><small>中庭から各部屋へ進む道の余地を残す。</small></span></label></li>
+<li id="check-vertical"><label><input type="checkbox" data-check="vertical"><span><strong>城と地下への経路を、実際に通れる状態にする</strong><small>行きと帰りの両方を歩いて確認する。</small></span></label></li>
+<li id="check-square"><label><input type="checkbox" data-check="square"><span><strong>駅前に一区画の広場をつくり、城下町へつなぐ</strong><small>倉庫へ向かう道を確保したまま、周囲を育てる。</small></span></label></li>
+</ul></div>
+<div class="phase" id="phase-three"><div class="phase-title"><span>03</span><div><h3>見せ場を、一つずつ育てる</h3><p>骨格を使いながら</p></div></div>
+<ul class="checklist">
+<li id="check-cathedral"><label><input type="checkbox" data-check="cathedral"><span><strong>大聖堂の窓まわりを一面試す</strong><small>利用できるパーツと、光の見え方を確かめてから広げる。</small></span></label></li>
+<li id="check-mirror"><label><input type="checkbox" data-check="mirror"><span><strong>鏡の部屋で使える表現を一つ試す</strong><small>鏡や映り込みが使えるか未確認。使えない場合の見せ方も現地で考える。</small></span></label></li>
+<li id="check-well"><label><input type="checkbox" data-check="well"><span><strong>井戸の位置を仮置きし、周囲を歩いてみる</strong><small>中庭や通路から見える位置を確認。</small></span></label></li>
+<li id="check-treasury"><label><input type="checkbox" data-check="treasury"><span><strong>宝物を置いて眺める一区画をつくる</strong><small>実用倉庫の荷物とは分けて、並べる物を選ぶ。</small></span></label></li>
+<li id="check-orchard"><label><input type="checkbox" data-check="orchard"><span><strong>地下で果樹を植えられるか、小さく確認する</strong><small>植栽・生育条件が合わなければ、場所や表現を見直す。</small></span></label></li>
+<li id="check-plants"><label><input type="checkbox" data-check="plants"><span><strong>地下植物室の、植物と光の一角を試す</strong><small>使える素材で静かな雰囲気が出るか眺めて確かめる。</small></span></label></li>
+</ul></div>
+<p class="small plan-limit">寸法・所持素材・利用可能なパーツ・ゲーム上の制約は未確認です。このリストは実測後に調整する建築準備案です。</p>
+<a class="text-link back-link" href="#overview">↑ 完成イメージに戻る</a>
+</section>
+
+<section class="page-section island-context" id="island-context" aria-labelledby="island-context-title">
+<div class="section-heading"><p class="eyebrow">ME-NO-SHIMA / THE WIDER ISLAND</p><h2 id="island-context-title">城から、島の構想へ。</h2><p>空中城も、メの島で育てる一つの拠点。駅や地下、実りの風景を考えるときは、島の設計書も一緒に眺めてみる。</p></div>
+<div class="island-context-grid">
+<a class="island-map-card" href="./#master-map"><img src="images/P-2026-014-master-map.png" width="1448" height="1086" loading="lazy" alt="既存のメの島全体図。島の設計書ページへ戻る"><span><small>MASTER MAP / P-2026-014</small><strong>島の全体図を開く <b aria-hidden="true">→</b></strong></span></a>
+<div class="island-references"><p class="reference-label">一緒に眺めたい設計書</p>
+<a href="./#facility-006"><small>地下の空間を考える / P-2026-006</small><strong>ゴロゴロ地下街<span aria-hidden="true">↗</span></strong></a>
+<a href="./#facility-007"><small>駅の役割を考える / P-2026-007</small><strong>ロケット団中央駅<span aria-hidden="true">↗</span></strong></a>
+<a href="./#facility-010"><small>実りの風景を考える / P-2026-010</small><strong>きのみ農園<span aria-hidden="true">↗</span></strong></a>
+<p class="small">既存の構想を参照するためのリンクです。空中城の島内位置、既存駅との関係や路線・地下通路の接続は未確定です。</p>
+<a class="all-designs" href="./#island-facilities">13施設の設計書一覧へ <span aria-hidden="true">→</span></a>
+</div></div>
+</section>
+</main>
+<footer><a class="wordmark" href="./">メの島 <span>島の設計書一覧へ戻る</span></a><p>原案 osakenpiro · コンセプトアート ChatGPT生成 · 構想と建築準備のためのファンメイド資料</p><p class="small">非公式・非営利の構想です。ゲームの公式情報ではありません。</p></footer>
+<dialog id="art-dialog" aria-labelledby="dialog-caption">
+<div class="dialog-bar"><p id="dialog-caption"></p><div class="dialog-actions"><button type="button" id="toggle-zoom" aria-pressed="false" aria-controls="expanded-art">原寸表示</button><button type="button" id="close-art" aria-label="拡大画像を閉じる">閉じる ×</button></div></div>
+<div class="dialog-image"><img id="expanded-art" alt=""></div>
+<p class="dialog-help">ボタンまたは画像で原寸表示／全体表示を切り替えます。原寸表示では上下左右にスクロールできます。Escでも閉じられます。</p>
+</dialog>
+</body>
+</html>

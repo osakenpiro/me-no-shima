@@ -225,6 +225,38 @@
     .gallery { grid-template-columns: 1fr; gap: 20px; padding: 0 12px 40px; }
     .master, .annex { padding-left: 12px; padding-right: 12px; }
   }
+  /* Bounded entrance to the floating-castle building note. */
+  .castle-entry { max-width: 1360px; margin: 28px auto 10px; display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--line); background: var(--paper-2); color: var(--ink); text-decoration: none; }
+  .castle-entry img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .castle-entry-copy { padding: 28px; align-self: center; }
+  .castle-entry-copy small { color: var(--red); font: 11px/1.7 monospace; letter-spacing: .1em; }
+  .castle-entry-copy h2 { font-size: 27px; line-height: 1.5; margin: 10px 0; }
+  .castle-entry-copy p { font-size: 14px; line-height: 1.8; }
+  .castle-entry-copy span { display: inline-block; margin-top: 18px; padding-bottom: 3px; border-bottom: 1px solid var(--ink); font: 13px/1.7 sans-serif; }
+  .castle-entry:hover { box-shadow: 0 8px 24px rgba(31,58,95,.15); }
+  .castle-entry:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+  @media (max-width: 1400px) { .castle-entry { margin-left: 20px; margin-right: 20px; } }
+  @media (max-width: 640px) { .castle-entry { grid-template-columns: 1fr; margin: 24px 12px 0; } .castle-entry-copy { padding: 20px; } .castle-entry-copy h2 { font-size: 25px; } }
+
+/* The same site navigation appears on the island and its building note. */
+.island-nav{display:flex;justify-content:center;border-bottom:1px solid #c4b58a;background:#e8dcb855}
+.island-nav a{display:flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 28px;color:#1f3a5f;text-decoration:none;font:13px/1.6 sans-serif;border-bottom:3px solid transparent}
+.island-nav a span{font:10px monospace;color:#963d32}.island-nav a:hover{background:#e8dcb8}.island-nav a[aria-current="page"]{border-bottom-color:#963d32;background:#fbf6e966}
+.island-nav a:focus-visible{outline:3px solid #963d32;outline-offset:-3px}
+@media(max-width:600px){.island-nav a{flex:1;gap:4px;padding:12px 5px;font-size:11px}.island-nav a span{font-size:9px}}
+
+  html{scroll-padding-top:24px;scroll-behavior:auto}
+  .building-notes{padding:38px 0 20px;background:linear-gradient(180deg,#e8dcb855,transparent)}
+  .building-notes-heading{max-width:1360px;margin:0 auto;padding:0 28px;border-left:3px solid var(--red)}
+  .building-notes-heading p{font:11px/1.8 monospace;letter-spacing:.12em;color:var(--red)}
+  .building-notes-heading h2{font-size:28px;font-weight:600;margin:6px 0}
+  .building-notes-heading>span{font-size:14px;color:var(--ink-2)}
+  .connection-caveat{max-width:1360px;margin:14px auto 0;padding:0 20px;font:12px/1.8 sans-serif;color:var(--ink-2)}
+  .card .castle-reference{display:block;border-top:1px solid var(--line);padding:14px 4px 4px;margin-top:16px;font:13px/1.8 sans-serif;text-underline-offset:4px;min-height:60px}
+  .castle-reference small{display:block;color:var(--ink-3);font-size:10px;margin-bottom:4px}.castle-reference span{float:right}.card .castle-reference:hover{text-decoration:underline;color:var(--red)}
+  .card:target{outline:3px solid var(--red);outline-offset:4px}.card a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+  @media(max-width:600px){.building-notes-heading{margin:0 20px;padding:0 15px}.building-notes-heading h2{font-size:23px}.building-notes-heading>span{font-size:12px}.connection-caveat{font-size:11px}.castle-entry-copy h2{font-size:24px}}
+  @media(prefers-reduced-motion:reduce){.card{transition:none}}
 </style>
 </head>
 <body>
@@ -233,13 +265,18 @@
   <h1>メの島</h1>
   <div class="subtitle">ME-NO-SHIMA &nbsp; / &nbsp; Development Plan Series</div>
 </header>
+<nav class="island-nav" aria-label="メの島 サイト案内">
+  <a href="./#master-map" aria-current="page"><span>01</span> 島の全体図</a>
+  <a href="./#island-facilities"><span>02</span> 施設の設計書</a>
+  <a href="floating-castle.html"><span>03</span> 空中城ノート</a>
+</nav>
 
 <div class="lead">
   <p>ぽこあポケモン由来ファンメイド島構想シリーズ。メタモン開発局・都市計画課による全13施設の建築設計書＋全体図。チャッピー（ChatGPT）画像生成、Claudeプロンプト設計、osakenpiro原案。</p>
   <p>各設計書は「ME-NO-SHIMA設計書様式」に準拠：俯瞰イラスト＋断面図＋平面図＋設計要点＋極秘スタンプ。ぽこぽけ統合handoff（35型理論カタログ）のビジュアル実装提案として機能。</p>
 </div>
 
-<div class="section-title">全体図 &nbsp; / &nbsp; Master Map</div>
+<div class="section-title" id="master-map">全体図 &nbsp; / &nbsp; Master Map</div>
 <section class="master">
   <div class="master-frame">
     <a href="images/P-2026-014-master-map.png" target="_blank">
@@ -249,7 +286,21 @@
   <div class="master-cap">No. P-2026-014 &nbsp;·&nbsp; 13施設＋路線＋空路＋地形を1枚に</div>
 </section>
 
-<div class="section-title">施設一覧 &nbsp; / &nbsp; Facilities</div>
+<section class="building-notes" aria-labelledby="building-notes-title">
+  <div class="building-notes-heading"><p>FROM ISLAND TO BUILDING</p><h2 id="building-notes-title">島の構想から、次の建築へ。</h2><span>全体図を眺めたら、一つの拠点を深く。</span></div>
+  <a class="castle-entry" href="floating-castle.html" aria-label="空中城・ターミナル拠点の建築ノートへ">
+  <img src="images/floating-castle-terminal.webp" width="1672" height="941" alt="雲の中に浮かぶ城と、ターミナル駅のある城下町の完成イメージ">
+  <div class="castle-entry-copy">
+    <small>ME-NO-SHIMA / BUILDING NOTE</small>
+    <h2>空中城・ターミナル拠点</h2>
+    <p>この島に、次の冒険の拠点を。<br>空中城と城下町、静かな地下の緑。新しい構想を、次のプレイで作る場所へつなぐ建築ノートです。</p>
+    <span>2枚のコンセプトアートと建築計画を見る →</span>
+  </div>
+</a>
+  <p class="connection-caveat">空中城の島内位置と、既存の駅・路線との接続は、これから考える構想です。</p>
+</section>
+
+<div class="section-title" id="island-facilities">施設一覧 &nbsp; / &nbsp; Facilities</div>
 <section class="gallery">
 
   <article class="card">
@@ -312,7 +363,7 @@
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" id="facility-006" tabindex="-1">
     <a href="images/P-2026-006-gorogoro-underground.png" target="_blank">
       <img src="images/P-2026-006-gorogoro-underground.png" alt="ゴロゴロ地下街">
     </a>
@@ -322,9 +373,10 @@
       <div class="title-en">Gorogoro Underground / Lively Bazaar Beneath the Rock</div>
       <div class="caption">岩盤補強はゴローニャ施工、オニックスがメイン動脈。地熱で年中ぽかぽか、化石発掘ゾーン併設。</div>
     </div>
+    <a class="castle-reference" href="floating-castle.html#plant-room"><small>空中城の建築ノートへ</small>地下植物室の構想を見る <span aria-hidden="true">→</span></a>
   </article>
 
-  <article class="card">
+  <article class="card" id="facility-007" tabindex="-1">
     <a href="images/P-2026-007-rocket-central-station.png" target="_blank">
       <img src="images/P-2026-007-rocket-central-station.png" alt="ロケット団中央駅">
     </a>
@@ -334,6 +386,7 @@
       <div class="title-en">Rocket Central Station / The Island's Suspiciously Convenient Gateway</div>
       <div class="caption">4路線（海底ぴがんじょう/ゴロゴロ/モケハバラ/なみのり）のハブ。ゴルバット照明、ドガース無害スモーク演出。</div>
     </div>
+    <a class="castle-reference" href="floating-castle.html#station"><small>空中城の建築ノートへ</small>ターミナル駅の構想を見る <span aria-hidden="true">→</span></a>
   </article>
 
   <article class="card">
@@ -356,7 +409,7 @@
     <span class="status">PENDING</span>
   </article>
 
-  <article class="card">
+  <article class="card" id="facility-010" tabindex="-1">
     <a href="images/P-2026-010-berry-farm.png" target="_blank">
       <img src="images/P-2026-010-berry-farm.png" alt="きのみ農園">
     </a>
@@ -366,6 +419,7 @@
       <div class="title-en">Berry Farmstead / Bounty of Sun, Soil & Pokémon</div>
       <div class="caption">トロピウスは歩く果樹園、エルフーン綿毛で受粉、収穫物はマルエツ市場へ直送。</div>
     </div>
+    <a class="castle-reference" href="floating-castle.html#orchard"><small>空中城の建築ノートへ</small>地下果樹園の構想を見る <span aria-hidden="true">→</span></a>
   </article>
 
   <article class="card">
